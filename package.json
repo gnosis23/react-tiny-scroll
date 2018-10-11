@@ -1,0 +1,67 @@
+{
+  "name": "react-tiny-scroll",
+  "version": "0.1.0",
+  "description": "A simple React component that scrolls slowly.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.jsx lib/ test/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel --out-dir ./build ./lib",
+    "build-example": "webpack",
+    "dev": "webpack-dev-server --open --open-page=examples/1.html",
+    "watch": "webpack --progress --watch",
+    "prepare": "npm run build",
+    "validate": "yarn check",
+    "preversion": "npm run lint",
+    "version": "git add CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gnosis23/react-tiny-scroll.git"
+  },
+  "keywords": [
+    "react",
+    "scroll"
+  ],
+  "author": "Bohao Wang <bj050323@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gnosis23/react-tiny-scroll/issues"
+  },
+  "homepage": "https://github.com/gnosis23/react-tiny-scroll#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.7.2",
+    "eslint-plugin-react": "^7.4.0",
+    "lodash": "^4.3.0",
+    "pre-commit": "^1.1.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "prop-types": "15.x"
+  },
+  "peerDependencies": {
+    "react": "0.14.x || 15.x || 16.x",
+    "react-dom": "0.14.x || 15.x || 16.x"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "pre-commit": [
+    "lint",
+    "validate"
+  ]
+}
