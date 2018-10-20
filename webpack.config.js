@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   context: __dirname,
   entry: {
-    test: "./demo/test.js",
+    test: "./demo/main.js",
   },
   output: {
     path: path.join(__dirname, "dist"),

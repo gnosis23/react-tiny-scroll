@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js,.jsx lib/ test/",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "babel --out-dir ./build ./lib",
     "build-example": "webpack",
     "dev": "webpack-dev-server --open --open-page=examples/1.html",
@@ -33,6 +33,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -40,8 +41,11 @@
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^4.7.2",
     "eslint-plugin-react": "^7.4.0",
+    "jest": "^23.6.0",
     "lodash": "^4.3.0",
     "pre-commit": "^1.1.2",
     "react": "^16.5.2",
@@ -63,5 +67,8 @@
   "pre-commit": [
     "lint",
     "validate"
-  ]
+  ],
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>config/setupTests.js"
+  }
 }
