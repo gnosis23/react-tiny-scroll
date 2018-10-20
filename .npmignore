@@ -1,5 +1,7 @@
 examples/
 test/
 lib/
+config/
+demo/
 *.config.js
 yarn.lock
