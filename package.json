@@ -11,7 +11,6 @@
     "dev": "webpack-dev-server --open --open-page=examples/1.html",
     "watch": "webpack --progress --watch",
     "prepare": "npm run build",
-    "validate": "yarn check",
     "preversion": "npm run lint",
     "version": "git add CHANGELOG.md"
   },
@@ -65,8 +64,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "pre-commit": [
-    "lint",
-    "validate"
+    "lint"
   ],
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>config/setupTests.js"
